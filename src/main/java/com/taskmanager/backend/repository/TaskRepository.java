@@ -11,13 +11,13 @@ import java.util.List;
 @Repository
 public interface TaskRepository extends JpaRepository<Task, Long> {
 
-    List<Task> findByCategory(TaskCategory category);
+    List<Task> findByTaskCategory(TaskCategory category);
 
-    List<Task> findByPriority(TaskPriority priority);
+    List<Task> findByTaskPriority(TaskPriority priority);
 
     List<Task> findByCompleted(Boolean completed);
 
-    List<Task> findByCategoryAndPriority(TaskCategory category, TaskPriority priority);
+    List<Task> findByTaskCategoryAndTaskPriority(TaskCategory category, TaskPriority priority);
 
     List<Task> findByTitleContainingIgnoreCase(String title);
 

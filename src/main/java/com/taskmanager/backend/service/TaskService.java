@@ -61,14 +61,14 @@ public class TaskService {
     }
 
     public List<TaskDTO> getTasksByCategory(TaskCategory taskCategory) {
-        return taskRepository.findByCategory(taskCategory)
+        return taskRepository.findByTaskCategory(taskCategory)
                 .stream()
                 .map(this::convertToDTO)
                 .toList();
     }
 
     public List<TaskDTO> getTasksByPriority(TaskPriority taskPriority) {
-        return taskRepository.findByPriority(taskPriority)
+        return taskRepository.findByTaskPriority(taskPriority)
                 .stream()
                 .map(this::convertToDTO)
                 .toList();
